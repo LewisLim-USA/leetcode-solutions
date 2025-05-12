@@ -1,14 +1,14 @@
-# Last updated: 5/12/2025, 9:46:16 AM
+# Last updated: 5/12/2025, 9:46:59 AM
 class Solution:
     def twoSum(self, numbers, target):
-        i = 0
-        j = len(numbers) - 1
+        i = 0                      # Start pointer at the beginning
+        j = len(numbers) - 1       # End pointer at the end
 
-        while i < j:
-            total = numbers[i] + numbers[j]
-            if total == target:
-                return [i + 1, j + 1]  # 1-indexed
-            if total < target:
-                i += 1
-            else:
-                j -= 1
+        while i < j:               # Keep checking while pointers don't cross
+            total = numbers[i] + numbers[j]  # Add the two pointed values
+            if total == target:              # If they match the target
+                return [i + 1, j + 1]         # Return 1-indexed positions
+            if total < target:               # If sum is too small
+                i += 1                        # Move start pointer right
+            else:                             # If sum is too big
+                j -= 1                        # Move end pointer left
