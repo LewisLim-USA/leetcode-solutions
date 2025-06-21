@@ -1,4 +1,4 @@
-# Last updated: 5/17/2025, 11:24:48 PM
+# Last updated: 6/22/2025, 6:39:49 AM
 class Solution:
     def search(self, arr: list[int], target: int) -> int:
         left, right = 0, len(arr) - 1
